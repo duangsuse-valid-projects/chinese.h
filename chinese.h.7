@@ -1,0 +1,74 @@
+.TH Chinese.h "Sep 24 2018" "Version 0.1.0" "Chinese H Manual Pages"
+
+.SH NAME
+chinese.h - Chinese expression C header
+
+.SH DESCRIPTION
+
+C / C++ header file for .B Clang / GCC  with HanPP
+
+#include "chinese.h"
+
+无返回 misc();
+
+noreturn 整数 main(整数 argc, 字符 数组(指向(argv))) 定义为
+  打印 参数 "你好世界" 调用 然后
+  调用方法(misc) 然后 退出程序(0);
+结束
+
+函数 misc() 定义为
+  打印 参数 "%s", 源代码文件 调用 然后
+  无限循环 做
+    打印 参数 "%c", 调用方法(获取字符) 调用 然后
+  完成
+结束
+
+
+.SH "OTHER INFO"
+
+GCC cannot use this header file directly
+
+define macro
+
+.B HANPP_USED
+
+before including this header if you're using HanPP
+
+. SH CUSTOMIZE
+
+define
+
+.B CXX_EXPERIMENTAL
+
+to open experimental C++ support
+
+/* Customize */
+#ifndef CHINESE_CUSTOMIZE
+
+# define KEYWORD_CN 1
+
+# define SYNTAX_EXT 1
+
+# define CXX_CN     1
+
+# define DUMMY_VAL  1
+
+# define STDFUNC_CN 1
+
+# define CPRELUDE   0
+
+# define TYPEALIAS  1
+
+# define STDVAL     1
+
+#endif
+
+only C and C++ is supported
+
+.SH AUTHORS
+duangsuse, main developer, creator
+
+
+.SH "SEE ALSO"
+.BR clang (1),
+.BR gcc (1),
