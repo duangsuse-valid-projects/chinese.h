@@ -1,0 +1,31 @@
+.TH HanPP "Sep 25 2018" "Version 0.1.0" "HanPP Manual Pages"
+
+.SH NAME
+
+hanpp - 汉语编程标识符合法化预处理工具
+
+.SH DESCRIPTION
+
+这个工具从标准输入获取 C 代码，将其非合法字符转为 Hex 字符串
+
+它在不合法开始的部位加一个 i 之后是不合法序列的数字
+
+过滤 C 语言字符串字面量 ""，支持 '\' escape 字符
+
+（字符串中 escape 字符后的  " 会被无视
+
+.SH SYNOPSIS
+
+.B hanpp
+
+[--license] [-l] [--version] [-v] [--help] [-h]
+
+.SH "OTHER INFO"
+
+有效字符 Ascii 序列：A-Z a-z 0-9 _ (space) (newline) (return) (tab) (vtab) (newpage) !-/ :-@ [-1 {-~
+
+.SH AUTHORS
+duangsuse, main developer, creator
+
+.SH "SEE ALSO"
+.BR chinese.h (7)

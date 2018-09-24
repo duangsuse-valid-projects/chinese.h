@@ -314,6 +314,7 @@
 # define 左移 <<
 # define 中的 ::
 # define 函数 void
+# define 如果不 if (!
 
 # ifdef HANPP_USED
 #  define ， ,
